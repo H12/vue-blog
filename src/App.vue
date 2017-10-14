@@ -1,28 +1,50 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <hello-world/>
+    <app-sidebar />
+    <app-content />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import AppContent from './components/AppContent';
+import AppSidebar from './components/AppSidebar';
 
 export default {
   name: 'app',
   components: {
-    HelloWorld,
+    AppContent,
+    AppSidebar,
   },
 };
 </script>
 
 <style>
+
+html {
+  background-color: #FFF0C6;
+  color: #474747;
+}
+
 #app {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+
+  display: flex;
 }
+
+.app-sidebar {
+  flex: 1;
+}
+
+.app-content {
+  flex: 4;
+}
+
 </style>
