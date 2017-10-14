@@ -1,6 +1,6 @@
-# vue-webpack
+# vue-blog
 
-> A Vue.js project
+> A Vue.js blog
 
 ## Build Setup
 
