@@ -1,7 +1,7 @@
 {
-  "name": "vue-webpack",
+  "name": "vue-blog",
   "version": "1.0.0",
-  "description": "A Vue.js project",
+  "description": "A Vue.js blog",
   "author": "H12",
   "private": true,
   "scripts": {
