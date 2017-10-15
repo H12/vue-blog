@@ -6,6 +6,6 @@ describe('AppContent.vue', () => {
     const Constructor = Vue.extend(AppContent);
     const vm = new Constructor().$mount();
     expect(vm.$el.querySelector('.app-content .title').textContent)
-      .to.equal('This is the Content');
+      .to.equal('Content');
   });
 });

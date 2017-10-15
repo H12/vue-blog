@@ -1,6 +1,10 @@
 <template>
-  <div class="app-content">
-    <div class="title">{{ title }}</div>
+  <div
+    class='app-content'
+    v-bind:class='{ collapsed: isCollapsed }'
+    v-on:click='expand'
+  >
+    <div class='title'>{{ title }}</div>
   </div>
 </template>
 
@@ -9,19 +13,32 @@ export default {
   name: 'AppContent',
   data() {
     return {
-      title: 'This is the Content',
+      title: 'Content',
     };
   },
+  props: ['isCollapsed', 'expand'],
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<!-- Add 'scoped' attribute to limit CSS to this component only -->
+<style lang='scss' scoped>
 .app-content {
+  flex: 5;
+
   display: flex;
   justify-content: center;
 
   padding: 1em;
+
+  transition: flex-grow 0.5s ease;
+}
+
+.collapsed {
+  flex: 1;
+
+  &:hover {
+    flex: 1.2;
+  }
 }
 
 .title {

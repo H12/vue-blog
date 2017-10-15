@@ -1,7 +1,13 @@
 <template>
-  <div id="app">
-    <app-sidebar />
-    <app-content />
+  <div id='app'>
+    <app-sidebar
+      v-bind:is-collapsed='isSidebarCollapsed'
+      v-bind:expand='expandSidebar'
+    />
+    <app-content
+      v-bind:is-collapsed='isContentCollapsed'
+      v-bind:expand='expandContent'
+    />
   </div>
 </template>
 
@@ -14,6 +20,28 @@ export default {
   components: {
     AppContent,
     AppSidebar,
+  },
+  data() {
+    return {
+      isContentCollapsed: false,
+      isSidebarCollapsed: true,
+    };
+  },
+  methods: {
+    expandContent() {
+      if (this.isContentCollapsed) {
+        this.toggleCollapsed();
+      }
+    },
+    expandSidebar() {
+      if (this.isSidebarCollapsed) {
+        this.toggleCollapsed();
+      }
+    },
+    toggleCollapsed() {
+      this.isContentCollapsed = !this.isContentCollapsed;
+      this.isSidebarCollapsed = !this.isSidebarCollapsed;
+    },
   },
 };
 </script>
@@ -37,14 +65,6 @@ html {
   -moz-osx-font-smoothing: grayscale;
 
   display: flex;
-}
-
-.app-sidebar {
-  flex: 1;
-}
-
-.app-content {
-  flex: 4;
 }
 
 </style>
