@@ -13,7 +13,7 @@ export default {
   name: 'AppSidebar',
   data() {
     return {
-      title: 'This is the Sidebar',
+      title: 'Sidebar',
     };
   },
   props: ['isCollapsed', 'expand'],
@@ -23,7 +23,7 @@ export default {
 <!-- Add 'scoped' attribute to limit CSS to this component only -->
 <style scoped>
 .app-sidebar {
-  flex: 4;
+  flex: 5;
   background-color: rgba(0,0,0,0.2);
 
   display: flex;
@@ -36,6 +36,10 @@ export default {
 
 .collapsed {
   flex: 1;
+}
+
+.collapsed:hover {
+  flex: 1.2;
 }
 
 .title {

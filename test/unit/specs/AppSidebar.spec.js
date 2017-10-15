@@ -6,6 +6,6 @@ describe('AppSidebar.vue', () => {
     const Constructor = Vue.extend(AppSidebar);
     const vm = new Constructor().$mount();
     expect(vm.$el.querySelector('.app-sidebar .title').textContent)
-      .to.equal('This is the Sidebar');
+      .to.equal('Sidebar');
   });
 });

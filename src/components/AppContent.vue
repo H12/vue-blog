@@ -13,7 +13,7 @@ export default {
   name: 'AppContent',
   data() {
     return {
-      title: 'This is the Content',
+      title: 'Content',
     };
   },
   props: ['isCollapsed', 'expand'],
@@ -23,7 +23,7 @@ export default {
 <!-- Add 'scoped' attribute to limit CSS to this component only -->
 <style scoped>
 .app-content {
-  flex: 4;
+  flex: 5;
 
   display: flex;
   justify-content: center;
@@ -35,6 +35,10 @@ export default {
 
 .collapsed {
   flex: 1;
+}
+
+.collapsed:hover {
+  flex: 1.2;
 }
 
 .title {
