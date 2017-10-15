@@ -29,6 +29,8 @@ export default {
   justify-content: center;
 
   padding: 1em;
+
+  transition: flex-grow 0.5s ease;
 }
 
 .collapsed {
