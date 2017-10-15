@@ -21,7 +21,7 @@ export default {
 </script>
 
 <!-- Add 'scoped' attribute to limit CSS to this component only -->
-<style scoped>
+<style lang='scss' scoped>
 .app-content {
   flex: 5;
 
@@ -35,10 +35,10 @@ export default {
 
 .collapsed {
   flex: 1;
-}
 
-.collapsed:hover {
-  flex: 1.2;
+  &:hover {
+    flex: 1.2;
+  }
 }
 
 .title {
