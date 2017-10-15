@@ -1,6 +1,10 @@
 <template>
-  <div class="app-sidebar">
-    <div class="title">{{ title }}</div>
+  <div
+    class='app-sidebar'
+    v-bind:class='{ collapsed: isCollapsed }'
+    v-on:click='expand'
+  >
+    <div class='title'>{{ title }}</div>
   </div>
 </template>
 
@@ -12,18 +16,24 @@ export default {
       title: 'This is the Sidebar',
     };
   },
+  props: ['isCollapsed', 'expand'],
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+<!-- Add 'scoped' attribute to limit CSS to this component only -->
 <style scoped>
 .app-sidebar {
+  flex: 4;
   background-color: rgba(0,0,0,0.2);
 
   display: flex;
   justify-content: center;
 
   padding: 1em;
+}
+
+.collapsed {
+  flex: 1;
 }
 
 .title {
