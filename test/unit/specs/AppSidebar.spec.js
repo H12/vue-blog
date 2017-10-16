@@ -1,11 +1,11 @@
 import Vue from 'vue';
-import AppSidebar from '@/components/AppSidebar';
+import Bio from '@/components/Bio';
 
-describe('AppSidebar.vue', () => {
+describe('Bio.vue', () => {
   it('should render correct contents', () => {
-    const Constructor = Vue.extend(AppSidebar);
+    const Constructor = Vue.extend(Bio);
     const vm = new Constructor().$mount();
-    expect(vm.$el.querySelector('.app-sidebar .title').textContent)
-      .to.equal('Sidebar');
+    expect(vm.$el.querySelector('.bio .title').textContent)
+      .to.equal('Bio');
   });
 });

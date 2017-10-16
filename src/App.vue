@@ -1,10 +1,10 @@
 <template>
   <div id='app'>
-    <app-sidebar
+    <Bio
       v-bind:is-collapsed='isSidebarCollapsed'
       v-bind:expand='expandSidebar'
     />
-    <app-content
+    <Content
       v-bind:is-collapsed='isContentCollapsed'
       v-bind:expand='expandContent'
     />
@@ -12,14 +12,14 @@
 </template>
 
 <script>
-import AppContent from './components/AppContent';
-import AppSidebar from './components/AppSidebar';
+import Bio from './components/Bio';
+import Content from './components/Content';
 
 export default {
   name: 'app',
   components: {
-    AppContent,
-    AppSidebar,
+    Bio,
+    Content,
   },
   data() {
     return {

@@ -1,6 +1,6 @@
 <template>
   <div
-    class='app-content'
+    class='bio'
     v-bind:class='{ collapsed: isCollapsed }'
     v-on:click='expand'
   >
@@ -10,10 +10,10 @@
 
 <script>
 export default {
-  name: 'AppContent',
+  name: 'Bio',
   data() {
     return {
-      title: 'Content',
+      title: 'Bio',
     };
   },
   props: ['isCollapsed', 'expand'],
@@ -22,8 +22,9 @@ export default {
 
 <!-- Add 'scoped' attribute to limit CSS to this component only -->
 <style lang='scss' scoped>
-.app-content {
+.bio {
   flex: 5;
+  background-color: rgba(0,0,0,0.2);
 
   display: flex;
   justify-content: center;

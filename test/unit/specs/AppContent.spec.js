@@ -1,11 +1,11 @@
 import Vue from 'vue';
-import AppContent from '@/components/AppContent';
+import Content from '@/components/Content';
 
-describe('AppContent.vue', () => {
+describe('Content.vue', () => {
   it('should render correct contents', () => {
-    const Constructor = Vue.extend(AppContent);
+    const Constructor = Vue.extend(Content);
     const vm = new Constructor().$mount();
-    expect(vm.$el.querySelector('.app-content .title').textContent)
+    expect(vm.$el.querySelector('.content .title').textContent)
       .to.equal('Content');
   });
 });

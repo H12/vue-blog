@@ -1,6 +1,6 @@
 <template>
   <div
-    class='app-sidebar'
+    class='content'
     v-bind:class='{ collapsed: isCollapsed }'
     v-on:click='expand'
   >
@@ -10,10 +10,10 @@
 
 <script>
 export default {
-  name: 'AppSidebar',
+  name: 'Content',
   data() {
     return {
-      title: 'Sidebar',
+      title: 'Content',
     };
   },
   props: ['isCollapsed', 'expand'],
@@ -22,9 +22,8 @@ export default {
 
 <!-- Add 'scoped' attribute to limit CSS to this component only -->
 <style lang='scss' scoped>
-.app-sidebar {
+.content {
   flex: 5;
-  background-color: rgba(0,0,0,0.2);
 
   display: flex;
   justify-content: center;
