@@ -14,6 +14,6 @@ describe('App.vue', () => {
 
   it('should render correct contents', () => {
     expect(app.$options.components).to.have.property('Bio');
-    expect(app.$options.components).to.have.property('Content');
+    expect(app.$options.components).to.have.property('Blog');
   });
 });

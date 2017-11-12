@@ -1,46 +1,46 @@
 <template>
   <div id='app'>
     <Bio
-      v-bind:is-collapsed='isSidebarCollapsed'
-      v-bind:expand='expandSidebar'
+      v-bind:is-collapsed='isBioCollapsed'
+      v-bind:expand='expandBio'
     />
-    <Content
-      v-bind:is-collapsed='isContentCollapsed'
-      v-bind:expand='expandContent'
+    <Blog
+      v-bind:is-collapsed='isBlogCollapsed'
+      v-bind:expand='expandBlog'
     />
   </div>
 </template>
 
 <script>
 import Bio from './components/Bio/Bio';
-import Content from './components/Content';
+import Blog from './components/Blog';
 
 export default {
   name: 'app',
   components: {
     Bio,
-    Content,
+    Blog,
   },
   data() {
     return {
-      isContentCollapsed: false,
-      isSidebarCollapsed: true,
+      isBlogCollapsed: false,
+      isBioCollapsed: true,
     };
   },
   methods: {
-    expandContent() {
-      if (this.isContentCollapsed) {
+    expandBlog() {
+      if (this.isBlogCollapsed) {
         this.toggleCollapsed();
       }
     },
-    expandSidebar() {
-      if (this.isSidebarCollapsed) {
+    expandBio() {
+      if (this.isBioCollapsed) {
         this.toggleCollapsed();
       }
     },
     toggleCollapsed() {
-      this.isContentCollapsed = !this.isContentCollapsed;
-      this.isSidebarCollapsed = !this.isSidebarCollapsed;
+      this.isBlogCollapsed = !this.isBlogCollapsed;
+      this.isBioCollapsed = !this.isBioCollapsed;
     },
   },
 };

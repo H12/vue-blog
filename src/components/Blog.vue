@@ -1,6 +1,6 @@
 <template>
   <div
-    class='content'
+    class='blog'
     v-bind:class='{ collapsed: isCollapsed }'
     v-on:click='expand'
   >
@@ -10,10 +10,10 @@
 
 <script>
 export default {
-  name: 'Content',
+  name: 'Blog',
   data() {
     return {
-      title: 'Content',
+      title: 'Blog',
     };
   },
   props: ['isCollapsed', 'expand'],
@@ -22,7 +22,7 @@ export default {
 
 <!-- Add 'scoped' attribute to limit CSS to this component only -->
 <style lang='scss' scoped>
-.content {
+.blog {
   flex: 5;
 
   display: flex;

@@ -5,7 +5,6 @@ describe('Bio.vue', () => {
   it('should render correct contents', () => {
     const Constructor = Vue.extend(Bio);
     const vm = new Constructor().$mount();
-    expect(vm.$el.querySelector('.bio .title').textContent)
-      .to.equal('Bio');
+    expect(vm.$el.querySelector('.bio .title').textContent).to.equal('Bio');
   });
 });
