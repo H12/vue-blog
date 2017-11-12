@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import Bio from '@/components/Bio';
+import Bio from '@/components/Bio/Bio';
 
 describe('Bio.vue', () => {
   it('should render correct contents', () => {

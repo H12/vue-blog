@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import Bio from './components/Bio';
+import Bio from './components/Bio/Bio';
 import Content from './components/Content';
 
 export default {
