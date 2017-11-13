@@ -2,11 +2,11 @@
   <div id='app'>
     <Bio
       v-bind:is-collapsed='isBioCollapsed'
-      v-bind:expand='expandBio'
+      v-bind:toggleCollapsed='toggleCollapsed'
     />
     <Blog
       v-bind:is-collapsed='isBlogCollapsed'
-      v-bind:expand='expandBlog'
+      v-bind:toggleCollapsed='toggleCollapsed'
     />
   </div>
 </template>
@@ -28,16 +28,6 @@ export default {
     };
   },
   methods: {
-    expandBlog() {
-      if (this.isBlogCollapsed) {
-        this.toggleCollapsed();
-      }
-    },
-    expandBio() {
-      if (this.isBioCollapsed) {
-        this.toggleCollapsed();
-      }
-    },
     toggleCollapsed() {
       this.isBlogCollapsed = !this.isBlogCollapsed;
       this.isBioCollapsed = !this.isBioCollapsed;

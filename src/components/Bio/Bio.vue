@@ -16,7 +16,14 @@ export default {
       title: 'Bio',
     };
   },
-  props: ['isCollapsed', 'expand'],
+  methods: {
+    expand() {
+      if (this.isCollapsed) {
+        this.toggleCollapsed();
+      }
+    },
+  },
+  props: ['isCollapsed', 'toggleCollapsed'],
 };
 </script>
 

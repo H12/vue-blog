@@ -19,30 +19,16 @@ describe('App.vue', () => {
   });
 
   describe('methods', () => {
-    describe('expandBio', () => {
-      it('should expand the blog when isBioCollapsed is true', () => {
+    describe('toggleCollapsed', () => {
+      it('should set isBioCollapsed to false when true', () => {
         app.$data.isBioCollapsed = true;
-        app.expandBio();
+        app.toggleCollapsed();
         expect(app.$data.isBioCollapsed).to.be.false;
       });
 
-      it('should do nothing when isBioCollapsed is false', () => {
-        app.$data.isBioCollapsed = false;
-        app.expandBio();
-        expect(app.$data.isBioCollapsed).to.be.false;
-      });
-    });
-
-    describe('expandBlog', () => {
-      it('should expand the blog when isBlogCollapsed is true', () => {
+      it('should set isBlogCollapsed to false when true', () => {
         app.$data.isBlogCollapsed = true;
-        app.expandBlog();
-        expect(app.$data.isBlogCollapsed).to.be.false;
-      });
-
-      it('should do nothing when isBlogCollapsed is false', () => {
-        app.$data.isBlogCollapsed = false;
-        app.expandBlog();
+        app.toggleCollapsed();
         expect(app.$data.isBlogCollapsed).to.be.false;
       });
     });
